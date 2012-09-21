@@ -98,7 +98,7 @@ Now let's add a simple document from the mongo shell
 
 	> db.colin.save({hello: "world"})
 
-And back to the file system to check out what's happened. We can look inside the dave.0 file and actually see out JSON doc saved in BSON form:
+And back to the file system to check out what's happened. We can look inside the dave.0 file and actually see our JSON doc saved in BSON form:
 
 	$ od -c dave.0
 
@@ -152,7 +152,7 @@ And mongostat provides some useful information about how things are performing
 
 	$ mongostat
 
-A MBP with SSD typically creates these document at a rate of between 9,000 and 12,000 per second. Note the mapped data total rising and the global lock being invoked. Writes are of course async so this is a useful baseline figure, not a meaningful benchmark.
+A Macbook Pro with SSD typically creates these document at a rate of between 9,000 and 12,000 per second. Note the mapped data total rising and the global lock being invoked. Writes are of course async so this is a useful baseline figure, not a meaningful benchmark.
 
 Back in the shell we can see what MongoDB thinks we have:
 
